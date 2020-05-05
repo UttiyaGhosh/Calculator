@@ -42,6 +42,19 @@ public class Basic {
                     System.out.println("Difference is =" + res);
                     break;
 
+                case '3':
+                    res = basic.multiply(a, b);
+                    System.out.println("Product is =" + res);
+                    break;
+
+                case '4':
+                    res = basic.divide(a, b);
+                    if(res==Float.POSITIVE_INFINITY)
+                        System.out.println("Division by 0 is not possible");
+                    else
+                        System.out.println("Quotient is =" + res);
+                    break;
+
                 case '5':
                     System.exit(0);
                     break;
@@ -52,6 +65,18 @@ public class Basic {
 
         }while (choice != '5');
 
+    }
+
+    float divide(float a, float b) {
+        if(b==0)
+            return Float.POSITIVE_INFINITY;
+        else
+            return a / b;
+
+    }
+
+    float multiply(float a, float b) {
+        return a*b;
     }
 
     float substract(float a, float b) {
