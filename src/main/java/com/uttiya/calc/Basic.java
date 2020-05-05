@@ -38,6 +38,11 @@ public class Basic {
                     break;
 
                 case '2':
+                    res = basic.substract(a, b);
+                    System.out.println("Difference is =" + res);
+                    break;
+
+                case '5':
                     System.exit(0);
                     break;
 
@@ -47,6 +52,10 @@ public class Basic {
 
         }while (choice != '5');
 
+    }
+
+    float substract(float a, float b) {
+        return a-b;
     }
 
     float add(float a,float b){
